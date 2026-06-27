@@ -5,7 +5,10 @@
       "src": "package.json",
       "use": "@vercel/next"
     }
-  ],
+  ],  "env": {
+    "NEXT_PUBLIC_STRAPI_API_URL": "@strapi_api_url",
+    "STRAPI_API_KEY": "@strapi_api_key"
+  },
   "env": {
     "NEXT_PUBLIC_STRAPI_API_URL": "@strapi_api_url",
     "STRAPI_API_KEY": "@strapi_api_key"
