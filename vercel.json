@@ -1,8 +1,20 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": ".next",
-  "env": [
-    "NEXT_PUBLIC_STRAPI_URL",
-    "NEXT_PUBLIC_STRAPI_API_TOKEN"
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_STRAPI_API_URL": "@strapi_api_url",
+    "STRAPI_API_KEY": "@strapi_api_key"
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/",
+      "status": 200
+    }
   ]
 }
